@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrase Aléatoire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background: url("https://plus.unsplash.com/premium_photo-1675198764235-2dc2b37146c9?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        #phrase {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function showRandomPhrase() {
+            const phrases = [
+                "La vie est belle !",
+                "Un jour sans rire est un jour perdu.",
+                "Le succès, c'est d'aller d'échec en échec sans perdre son enthousiasme.",
+                "Rien n'est impossible à celui qui croit."
+            ];
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            document.getElementById("phrase").innerText = phrases[randomIndex];
+        }
+        window.onload = showRandomPhrase;
+    </script>
+</head>
+<body>
+    <h1>Phrase Aléatoire</h1>
+    <p id="phrase"></p>
+</body>
+</html>
